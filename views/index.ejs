@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><h1>Pokemons</h1></li>
+            <li><a href="#cadastrar">Cadastro </a></li> 
+            <li><a href="#cards">Pokemons</a></li>
+        </ul>
+        
+    </nav>
+
+  <main>
+<section id="cards">
+
+    <%pokedex.forEach((pokemon) => { %>
+
+
+  
+    <div class="card">
+<img src="<%= pokemon.foto %>" alt="">
+<h2><%= pokemon.nome %></h2>
+<p><%= pokemon.num %></p>
+<p><%= pokemon.tipo %></p>
+<p><%= pokemon.descricao %></p>
+<p><%= pokemon.altura %></p>
+<p><%= pokemon.peso %></p>
+<p><%= pokemon.categoria %></p>
+<p><%= pokemon.habilidade %></p>
+</div>
+<%   })  %>
+</section>
+
+<section id="cadastrar">
+<h2>Cadastre um Pokemon</h2>
+
+<form action="/add" method="post">
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" >
+
+    <label for="num">Número:</label>
+    <input type="text" id="num" name="num">
+
+    <label for="tipo">Tipo:</label>
+    <input type="text" id="tipo" name="tipo">
+
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao" name="descricao">
+
+    <label for="altura">Altura:</label>
+    <input type="text" id="altura" name="altura">
+
+    <label for="peso">Peso:</label>
+    <input type="text" id="peso" name="peso">
+
+    <label for="categoria">Categoria:</label>
+    <input type="text" id="categoria" name="categoria">
+
+ <label for="habilidade">Habilidade:</label>
+    <input type="text" id="habilidade" name="habilidade">
+
+    <label for="foto">Link da foto</label>
+    <input type="text" id="foto" name="foto">
+
+  
+
+<button class="cadastro" type="submit" >Cadastrar</button>
+
+</form>
+</section>
+
+</main>
+
+<footer>Por: Larissa Fernanda <br> Fins educativos.</footer>
+</body>
+
+</html>
