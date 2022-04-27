@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@1,400;1,500;1,600;1,700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-     
+     font-family: 'Libre Bodoni', serif;
 }
+
+body {
+    background-image: url("http://24.media.tumblr.com/dd44c0fd9446c0fc9dfa02059d3ced37/tumblr_mvqgsaLwG31s8b7jbo1_1280.gif");
+}
+
 
 nav {
     width:100% ;
@@ -24,7 +31,7 @@ nav ul li {
 nav ul li a{
     text-decoration: none;
     color: aliceblue ;
-    font-size: 1rem;
+    font-size: 2rem;
 
 }
 
@@ -36,21 +43,22 @@ h1 {
 
 main {
     margin: 0 15rem 0 15rem ;
-    background-color: rgb(162, 164, 167);
 }
 
 section#cards {
     display: flex;
     justify-content: space-evenly;
     flex-wrap:wrap ;
-    margin-top: 7rem;
+    margin: 6rem;
+    background-color: rgb(241, 240, 156);
 }
 
 section#cards div.card {
-    width: 30rem;
+    width: 20rem;
     box-shadow: 7px 5px 7px 5px rgb(49, 16, 16);
     padding: 2rem;
     margin-top: 2rem;
+    border-radius: 10%;
 }
 
 section#cards div.card img {
@@ -65,43 +73,16 @@ section#cards div.card p {
     margin-bottom: 1rem;
 }
 
-section#cadastrar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 6rem;
-}
-
-section#cadastrar h2 {
-    width: 100%;
-    text-align: center;
-    padding-bottom: 6rem;
-}
-
-section#cadastrar form input {
-    width: 100%;
-    padding: 0.7rem;
-    font-size: 1rem;
-    margin: 0rem 1rem 1rem 1rem
-    
-}
-
-section#cadastrar form button {
-    padding: 1rem;
-    width: 15%;
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    color: red;
-    justify-content: center;
-}
-
-section#cadastrar form button:hover {
-    background-color: rgb(7, 30, 43);
-    color: red;
-}
 
 footer {
     background-color: black;
     color: white;
     text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+      max-width: 480px;
+      font-size: 1rem;
+    }
 }

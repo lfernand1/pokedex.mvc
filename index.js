@@ -1,8 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const app = express();
 let message = "";
 
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
@@ -22,6 +24,7 @@ const pokedex = [
     categoria: "Categoria: Borboleta",
     habilidade: "Habilidade: Olhos compostos",
   },
+
 
   {
     id:2,
@@ -56,12 +59,17 @@ app.get("/", (req, res) => {
   res.render("index", { pokedex });
 });
 
+app.get("/cadastro", (req, res) => {
+  res.render("cadastro.ejs");
+});
+
 app.post("/add", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length +1;
   pokedex.push(pokemon)
   res.redirect("/");
 });
+
 
 
 app.listen(3000, () =>
