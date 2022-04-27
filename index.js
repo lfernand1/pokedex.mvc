@@ -72,7 +72,7 @@ app.post("/add", (req, res) => {
 
 
 
-app.listen(3000, () =>
+app.listen(port, () =>
 
-  console.log("servidor rodando em http://localhost:3000")
+  console.log('servidor rodando em http://localhost:',port)
 );
